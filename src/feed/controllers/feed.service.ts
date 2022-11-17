@@ -12,7 +12,21 @@ export class FeedService {
     private readonly recipeInfoRepository: Repository<RecipeInfoEntity>,
   ) {}
 
-  findRecipe(): Observable<RecipeInfo[]> {
+  createRecipe(recipeInfo: RecipeInfo): Observable<RecipeInfo> {
+    return from(this.recipeInfoRepository.save(recipeInfo));
+  }
+
+  findRecipes(): Observable<RecipeInfo[]> {
     return from(this.recipeInfoRepository.find());
+  }
+
+  findRecipe(id: number): Observable<RecipeInfo[]> {
+    return from(
+      this.recipeInfoRepository.find({
+        where: {
+          id: id,
+        },
+      }),
+    );
   }
 }

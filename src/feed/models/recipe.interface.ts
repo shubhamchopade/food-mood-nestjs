@@ -1,4 +1,30 @@
 export interface RecipeInfo {
   id?: number;
-  body?: string;
+  country?: string;
+  description?: string;
+  id_?: string;
+  keywords?: string;
+  is_shoppable?: string;
+  language?: string;
+  name?: string;
+  slug?: string;
+  video_url?: string;
+  is_licensed_video?: string;
+  is_community?: string;
+  thumbnail_url?: string;
+  inspired_by?: string;
+  linked_recipes?: string;
+  tags?: string;
+  cook_time?: string;
+  prep_time?: string;
+  total_time?: string;
+  ratings_negative?: string;
+  ratings_positive?: string;
+  score?: string;
+  protein?: string;
+  fat?: string;
+  calories?: string;
+  sugar?: string;
+  carbohydrates?: string;
+  fiber?: string;
 }
